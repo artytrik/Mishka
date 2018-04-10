@@ -1,7 +1,8 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Артём Трикашный](https://up.htmlacademy.ru/adaptive/14/user/103121).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Зубов]
+(https://up.htmlacademy.ru/adaptive/14/user/208340).
 
 ---
 
