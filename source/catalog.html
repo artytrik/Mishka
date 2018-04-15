@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Мишка: каталог</title>
+    <title>Мишка: Каталог товаров</title>
   </head>
   <body>
     <header class="page-header">
@@ -74,7 +74,8 @@
         </p>
         <a class="button making__order" href="form.html">Сделать заказ</a>
       </section>
-       <footer class="page-footer">
+    </main>
+    <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__social social">
           <ul class="social__list">
@@ -89,6 +90,21 @@
         </div>
       </div>
     </footer>
-    </main>
+    <section class="modal-cart">
+      <h2 class="visibility-hidden">Корзина</h2>
+      <b class="modal-cart__title">Добавить  в корзину</b>
+      <p class="modal-cart__text">Выберите размер:</p>
+      <form class="modal-cart__size-form" method="post" action="https://echo.htmlacademy.ru">
+        <ul class="size-choosing">
+          <label class="modal-cart__size-name" for="form-size-s">S</label>
+          <input class="modal-cart__size-select" name="size-s" id="form-size-s" type="radio">
+          <label class="modal-cart__size-name" for="form-size-m">M</label>
+          <input class="modal-cart__size-select" name="size-m" id="form-size-m" type="radio">
+          <label class="modal-cart__size-name" for="form-size-l">L</label>
+          <input class="modal-cart__size-select" name="size-l" id="form-size-l" type="radio">
+        </ul>
+        <button class="button modal-cart__add" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>
