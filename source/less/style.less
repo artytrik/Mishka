@@ -1,8 +1,11 @@
+@import "variables.less";
+@import "mixins.less";
 @import "blocks/page-header.less";
 @import "blocks/site-list.less";
 @import "blocks/main-nav.less";
 @import "blocks/page-main.less";
 @import "blocks/goods.less";
+@import "blocks/goods-list.less";
 @import "blocks/best.less";
 @import "blocks/advantages.less";
 @import "blocks/reviews.less";
@@ -18,5 +21,58 @@
 @import "blocks/order.less";
 @import "blocks/order-form.less";
 
+body {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0;
 
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  font-weight: @base-font-weight;
+  color: @base-color;
+
+  background-color: @base-background-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  font: inherit;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: @base-color;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 2px solid @base-color;
+}
 
