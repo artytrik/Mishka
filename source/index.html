@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -11,12 +12,12 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav-wrapper">
+        <div class="main-nav__wrapper">
           <ul class="site-list">
             <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="site-list__item">
-              <label class="visibility-hidden" for="site-search">Поиск</label>
+              <label class="visually-hidden" for="site-search">Поиск</label>
               <input class="site-list__search" type="text" name="search" id="site-search" placeholder="Поиск по сайту">
             </li>
             <li class="site-list__item"><a href="cart.html">Корзина: пока пуста</a></li>
@@ -25,20 +26,21 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visibility-hidden">Интернет-магазин "Мишка"</h1>
+      <h1 class="visually-hidden">Интернет-магазин "Мишка"</h1>
       <section class="goods">
         <header class="goods__header">
-          <h2 class="visibility-hidden">Товары в магазине</h2>
-          <b class="goods__intro">Милые штуки ручной работы для дома</b>
+          <h2 class="visually-hidden">Товары в магазине</h2>
+          <b class="goods__intro">Милые штуки ручной<br>работы для дома</b>
         </header>
-        <ul class="goods__list">
-          <li class="goods__item">Предметы  интерьера</li>
-          <li class="goods__item">Детские  игрушки</li>
+        <ul class="goods-list">
+          <li class="goods-list__item goods-list__item--left"><a href="#">Предметы  интерьера</a></li>
+          <li class="goods-list__item goods-list__item--right"><a href="#">Детские  игрушки</a></li>
         </ul>
       </section>
       <section class="best">
-        <h2 class="best__title">Товар недели</h2>
+        <h2 class="visually-hidden">Лучший товар недели</h2>
         <h3 class="best__name">Вязаные корзинки</h3>
+        <b class="best__title">Товар недели</b>
         <p class="best__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="best__characteristics">
           <tr>
@@ -96,7 +98,7 @@
           <button class="reviews__prev" type="button">Предыдущий отзыв</button>
           <button class="reviews__next" type="button">Следующий отзыв</button>
         </p>
-        <a class="reviews__write" href="#">Написать</a>
+        <a class="button reviews__write" href="#">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
@@ -117,7 +119,7 @@
         <p class="contacts__map">
           <img class="contacts__map-picture" src="http://placehold.it/150x100" width="322" height="457" alt="Местоположение магазина">
         </p>
-        <a class="contacts__write" href="#">Напишите нам</a>
+        <a class="button contacts__write" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -136,17 +138,17 @@
       </div>
     </footer>
     <section class="modal-cart">
-      <h2 class="visibility-hidden">Корзина</h2>
+      <h2 class="visually-hidden">Корзина</h2>
       <b class="modal-cart__title">Добавить  в корзину</b>
       <p class="modal-cart__text">Выберите размер:</p>
       <form class="modal-cart__size-form" method="post" action="https://echo.htmlacademy.ru">
         <ul class="size-choosing">
-          <label class="modal-cart__size-name" for="form-size-s">S</label>
-          <input class="modal-cart__size-select" name="size-s" id="form-size-s" type="radio">
-          <label class="modal-cart__size-name" for="form-size-m">M</label>
-          <input class="modal-cart__size-select" name="size-m" id="form-size-m" type="radio">
-          <label class="modal-cart__size-name" for="form-size-l">L</label>
-          <input class="modal-cart__size-select" name="size-l" id="form-size-l" type="radio">
+          <label class="size-choosing__size-name" for="form-size-s">S</label>
+          <input class="visually-hidden size-choosing__size-select" name="size-s" id="form-size-s" type="radio">
+          <label class="size-choosing__size-name" for="form-size-m">M</label>
+          <input class="visually-hidden size-choosing__size-select" name="size-m" id="form-size-m" type="radio">
+          <label class="size-choosing__size-name" for="form-size-l">L</label>
+          <input class="visually-hidden size-choosing__size-select" name="size-l" id="form-size-l" type="radio">
         </ul>
         <button class="button modal-cart__add" type="submit">Добавить</button>
       </form>
