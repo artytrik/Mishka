@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Мишка: Каталог товаров</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="http://placehold.it/150x100" width="86" height="35" alt="Магазин &laquo;Мишка&raquo;">
       </a>
       <nav class="main-nav">
@@ -16,7 +19,7 @@
             <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="site-list__item">
-              <label class="visibility-hidden" for="site-search">Поиск</label>
+              <label class="visually-hidden" for="site-search">Поиск</label>
               <input class="site-list__search" type="text" name="search" id="site-search" placeholder="Поиск по сайту">
             </li>
             <li class="site-list__item"><a href="cart.html">Корзина: пока пуста</a></li>
@@ -25,9 +28,11 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visibility-hidden">Товары интернет-магазина &laquo;Мишка&raquo;</h1>
+      <h1 class="visually-hidden">Товары интернет-магазина &laquo;Мишка&raquo;</h1>
       <section class="catalog">
-        <h2 class="catalog__title">Каталог товаров</h2>
+        <header class="catalog__header">
+          <h2 class="catalog__title">Каталог товаров</h2>
+        </header>
         <ul class="catalog-list">
           <li class="catalog-list__item">
             <h3 class="catalog-list__name">Зайчик-попрыгайчик</h3>
@@ -91,7 +96,7 @@
       </div>
     </footer>
     <section class="modal-cart">
-      <h2 class="visibility-hidden">Корзина</h2>
+      <h2 class="visually-hidden">Корзина</h2>
       <b class="modal-cart__title">Добавить  в корзину</b>
       <p class="modal-cart__text">Выберите размер:</p>
       <form class="modal-cart__size-form" method="post" action="https://echo.htmlacademy.ru">

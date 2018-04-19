@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Мишка: Вязание на заказ</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="http://placehold.it/150x100" width="86" height="35" alt="Магазин &laquo;Мишка&raquo;">
       </a>
       <nav class="main-nav">
@@ -16,7 +19,7 @@
             <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="site-list__item">
-              <label class="visibility-hidden" for="site-search">Поиск</label>
+              <label class="visually-hidden" for="site-search">Поиск</label>
               <input class="site-list__search" type="text" name="search" id="site-search" placeholder="Поиск по сайту">
             </li>
             <li class="site-list__item"><a href="cart.html">Корзина: пока пуста</a></li>
@@ -25,14 +28,16 @@
       </nav>
     </header>
     <section class="order">
-      <h1 class="order__title">Вязание на заказ</h1>
+      <header class="order__header">
+        <h1 class="order__title">Вязание на заказ</h1>
+      </header>
       <p class="order__description">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали
       </p>
       <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="order-form__item">
           <legend class="order-form__name">Тип</legend>
-          <ul>
+          <ul class="order-form__list">
             <li class="order-form__option">
               <input class="visually-hidden order-form__input order-form__input--radio" type="radio" name="accessories" id="form-accessories" checked>
               <label class="order-form__option-name" for="form-accessories">Аксессуар для  интерьера</label>
@@ -45,7 +50,7 @@
         </fieldset >
         <fieldset class="order-form__item">
           <legend class="order-form__name">Цвет</legend>
-          <ul>
+          <ul class="order-form__list">
             <li class="order-form__option">
               <input class="visually-hidden order-form__input order-form__input--checkbox" type="checkbox" name="white-color" id="form-white-color" checked>
               <label class="order-form__option-name" for="form-white-color">Белый</label>
