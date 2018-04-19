@@ -14,7 +14,7 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav-wrapper">
+        <div class="main-nav__wrapper">
           <ul class="site-list">
             <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
@@ -99,14 +99,14 @@
       <h2 class="visually-hidden">Корзина</h2>
       <b class="modal-cart__title">Добавить  в корзину</b>
       <p class="modal-cart__text">Выберите размер:</p>
-      <form class="modal-cart__size-form" method="post" action="https://echo.htmlacademy.ru">
+     <form class="modal-cart__size-form" method="post" action="https://echo.htmlacademy.ru">
         <ul class="size-choosing">
-          <label class="modal-cart__size-name" for="form-size-s">S</label>
-          <input class="modal-cart__size-select" name="size-s" id="form-size-s" type="radio">
-          <label class="modal-cart__size-name" for="form-size-m">M</label>
-          <input class="modal-cart__size-select" name="size-m" id="form-size-m" type="radio">
-          <label class="modal-cart__size-name" for="form-size-l">L</label>
-          <input class="modal-cart__size-select" name="size-l" id="form-size-l" type="radio">
+          <label class="size-choosing__size-name" for="form-size-s">S</label>
+          <input class="visually-hidden size-choosing__size-select" name="size-s" id="form-size-s" type="radio">
+          <label class="size-choosing__size-name" for="form-size-m">M</label>
+          <input class="visually-hidden size-choosing__size-select" name="size-m" id="form-size-m" type="radio">
+          <label class="size-choosing__size-name" for="form-size-l">L</label>
+          <input class="visually-hidden size-choosing__size-select" name="size-l" id="form-size-l" type="radio">
         </ul>
         <button class="button modal-cart__add" type="submit">Добавить</button>
       </form>
