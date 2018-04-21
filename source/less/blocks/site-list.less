@@ -1,7 +1,27 @@
 .site-list {
-  .clear-ul();
+  display: flex;
+  flex-direction: column;
 }
 
 .site-list__item a {
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 384px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item--new,
+  .site-list__item--sale {
+    display: block;
+  }
+
+  .site-list {
+    order: -3;
+  }
 }

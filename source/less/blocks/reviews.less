@@ -2,7 +2,16 @@
   padding: 30px;
 }
 
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  width: 320px;
+}
+
 .reviews__title {
+  order: -2;
   margin: 0;
 
   font-size: 25px;
@@ -24,4 +33,22 @@
 .reviews__email {
   font-size: 17px;
   font-style: normal;
+}
+
+@media (min-width:@tablet-width) {
+  .reviews__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 668px;
+  }
+
+  .reviews__write {
+    order: -1;
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .reviews__wrapper {
+    width: 1050px;
+  }
 }
