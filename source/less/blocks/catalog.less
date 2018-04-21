@@ -1,3 +1,8 @@
+.catalog__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .catalog__header {
   text-align: center;
   background-color: #f1f1f1;
@@ -11,3 +16,18 @@
   font-size: 25px;
   color: #000000;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog__wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__wrapper {
+    width: 1150px;
+  }
+}
+
+
+

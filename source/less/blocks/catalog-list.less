@@ -1,8 +1,13 @@
 .catalog-list {
   .clear-ul();
+
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog-list__item {
+  display: flex;
+  flex-direction: column;
   padding: 30px;
 }
 
@@ -21,4 +26,23 @@
 .catalog-list__price {
   line-height: 24px;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-list__item {
+    width: 668px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .catalog-list__item {
+    width: 314px;
+    flex-direction: column;
+  }
 }
