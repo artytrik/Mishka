@@ -7,22 +7,29 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="86" height="35" alt="Магазин &laquo;Мишка&raquo;">
-      </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="site-list">
-            <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="site-list__item">
-              <label class="visually-hidden" for="site-search">Поиск</label>
-              <input class="site-list__search" type="text" name="search" id="site-search" placeholder="Поиск по сайту">
-            </li>
-            <li class="site-list__item"><a href="cart.html">Корзина: пока пуста</a></li>
-          </ul>
+        <div class="main-nav__logo-wrapper">
+          <a class="main-nav__logo" href="index.html">
+            <img class="main-nav__logo-image" src="http://placehold.it/150x100" width="86" height="35" alt="Магазин &laquo;Мишка&raquo;">
+          </a>
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
         </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item user-list__item--search">
+            <label class="visually-hidden" for="site-search">Поиск</label>
+            <input class="user-list__search" type="text" name="search" id="site-search" placeholder="Поиск по сайту">
+          </li>
+          <li class="user-list__item user-list__item--cart"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+        <ul class="main-nav__list sales-list">
+          <li class="sales-list__item"><a href="#">Новые поступления</a></li>
+          <li class="sales-list__item"><a href="#">Распродажа</a></li>
+        </ul>
+        <span class="main-nav__delivery">Бесплатная доставка по России</span>
       </nav>
     </header>
     <main class="page-main">
@@ -31,55 +38,74 @@
         <header class="catalog__header">
           <h2 class="catalog__title">Каталог товаров</h2>
         </header>
-        <ul class="catalog-list">
-          <li class="catalog-list__item">
-            <h3 class="catalog-list__name">Зайчик-попрыгайчик</h3>
-            <p class="catalog-list__picture">
-              <img class="catalog-list__image" src="http://placehold.it/150x100" width="260" height="195" alt="Зайчик-попрыгайчик">
-            </p>
-            <p class="catalog-list__description">
-              Рост 30 см, вес 200 г
-            </p>
-            <b class="catalog-list__price">1 200 руб.</b>
-            <button class="catalog-list__cart" type="button">Добавить в корзину</button>
-          </li>
-          <li class="catalog-list__item">
-            <h3 class="catalog-list__name">Корзинка для белья</h3>
-            <p class="catalog-list__picture">
-              <img class="catalog-list__image" src="http://placehold.it/150x100" width="260" height="195" alt="Зайчик-попрыгайчик">
-            </p>
-            <p class="catalog-list__description">
-              Диаметр 15 см, высота 10 см
-            </p>
-            <b class="catalog-list__price">690 руб.</b>
-            <button class="catalog-list__cart" type="button">Добавить в корзину</button>
-          </li>
-          <li class="catalog-list__item">
-            <h3 class="catalog-list__name">Большая корзинка для игрушек</h3>
-            <p class="catalog-list__picture">
-              <img class="catalog-list__image" src="http://placehold.it/150x100" width="260" height="195" alt="Зайчик-попрыгайчик">
-            </p>
-            <p class="catalog-list__description">
-              Диаметр 30 см, высота 30 см
-            </p>
-            <b class="catalog-list__price">1 500 руб.</b>
-            <button class="catalog-list__cart">Добавить в корзину</button>
-          </li>
-        </ul>
+        <div class="catalog__wrapper">
+          <ul class="catalog-list">
+            <li class="catalog-list__item">
+              <p class="catalog-list__picture">
+                <img class="catalog-list__image" src="http://placehold.it/150x100" width="260" height="195" alt="Зайчик-попрыгайчик">
+              </p>
+              <div class="catalog-list__description-wrapper">
+                <h3 class="catalog-list__name">Зайчик-попрыгайчик</h3>
+                <p class="catalog-list__description">
+                  Рост 30 см, вес 200 г
+                </p>
+                <div class="catalog-list__price-wrapper">
+                  <b class="catalog-list__price">1 200 руб.</b>
+                  <button class="catalog-list__cart" type="button">Добавить в корзину</button>
+                </div>
+              </div>
+            </li>
+            <li class="catalog-list__item">
+              <p class="catalog-list__picture">
+                <img class="catalog-list__image" src="http://placehold.it/150x100" width="260" height="195" alt="Зайчик-попрыгайчик">
+              </p>
+              <div class="catalog-list__description-wrapper">
+                <h3 class="catalog-list__name">Корзинка для белья</h3>
+                <p class="catalog-list__description">
+                  Диаметр 15 см, высота 10 см
+                </p>
+                <div class="catalog-list__price-wrapper">
+                  <b class="catalog-list__price">690 руб.</b>
+                  <button class="catalog-list__cart" type="button">Добавить в корзину</button>
+                </div>
+              </div>
+            </li>
+            <li class="catalog-list__item">
+              <p class="catalog-list__picture">
+                <img class="catalog-list__image" src="http://placehold.it/150x100" width="260" height="195" alt="Зайчик-попрыгайчик">
+              </p>
+              <div class="catalog-list__description-wrapper">
+                <h3 class="catalog-list__name">Большая корзинка для игрушек</h3>
+                <p class="catalog-list__description">
+                  Диаметр 30 см, высота 30 см
+                </p>
+                <div class="catalog-list__price-wrapper">
+                  <b class="catalog-list__price">1 500 руб.</b>
+                  <button class="catalog-list__cart">Добавить в корзину</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="making">
-        <h2 class="making__title">Процесс производства</h2>
-        <video class="making__video" width="260" height="150" controls>
-          <source src="http://placehold.it/150x100" type="video/mp4">
-        </video>
-        <p class="making__description">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-        </p>
-        <a class="button making__order" href="form.html">Сделать заказ</a>
+        <div class="making__wrapper">
+          <h2 class="making__title">Процесс производства</h2>
+          <video class="making__video" width="260" height="150" controls>
+            <source src="http://placehold.it/150x100" type="video/mp4">
+          </video>
+          <p class="making__description">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+          </p>
+          <a class="button making__order" href="form.html">Сделать заказ</a>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <a class="page-footer__logo">
+          <img class="main-nav__logo-image" src="http://placehold.it/150x100" width="86" height="35" alt="Магазин &laquo;Мишка&raquo;">
+        </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item"><a href="https://www.instagram.com/htmlacademy" class="social__link social__link--instagram">Инстаграм</a></li>

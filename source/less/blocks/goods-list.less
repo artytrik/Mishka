@@ -1,11 +1,14 @@
 .goods-list {
-  margin: 0;
-  padding: 0;
+  .clear-ul();
 
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .goods-list__item {
+  width: 80%;
   padding: 28px 30px;
 
   font-size: 19px;
@@ -25,3 +28,15 @@
   background-color: #56c3b2;
 }
 
+@media (min-width: @tablet-width) {
+  .goods-list {
+    flex-direction: row;
+    width: 668px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goods-list {
+    width: 1050px;
+  }
+}
