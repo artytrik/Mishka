@@ -1,5 +1,50 @@
 .user-list__item a {
+  position: relative;
+
+  display: block;
+  padding: 29px 30px;
+  padding-left: 76px;
+
   color: #000000;
+
+  border-top: 1px solid #ececec;
+}
+
+.user-list__item svg {
+  position: absolute;
+  top: 31px;
+  left: 30px;
+
+  width: 21px;
+  height: 18px;
+
+  opacity: 0.2;
+
+  path {
+    fill: #818181;
+  }
+}
+
+.user-list__item a[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:hover svg {
+    opacity: 1;
+
+    path{
+      fill: #63d1bb;
+    }
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:active svg{
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

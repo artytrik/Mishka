@@ -4,7 +4,23 @@
 }
 
 .site-list__item a {
+  display: block;
+  padding: 29px 30px;
+  padding-left: 76px;
+
   color: #000000;
+
+  border-top: 1px solid #ececec;
+}
+
+.site-list__item a[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+   &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
