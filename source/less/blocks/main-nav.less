@@ -96,12 +96,12 @@
 
   display: flex;
   flex-direction: column;
-
 }
 
 .main-nav__delivery {
   display: none;
 
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -120,17 +120,29 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: -58px;
-
     width: 768px;
-    height: 146px;
+    padding: 0 50px;
+
+    box-sizing: border-box;
+    border: none;
   }
 
   .main-nav__logo-wrapper {
     order: -2;
     display: block;
-    width: 315px;
+    width: 167px;
+    margin-top: 22px;
+    margin-bottom: 20px;
     padding: 0;
+  }
+
+  .main-nav__logo {
+    height: 46px;
+  }
+
+  .main-nav__logo-image {
+    width: 113px;
+    height: 46px;
   }
 
   .main-nav__toggle {
@@ -139,10 +151,12 @@
 
   .main-nav__list {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .main-nav__delivery {
     display: block;
+    padding: 13px 0;
   }
 }
 
