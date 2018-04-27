@@ -9,5 +9,21 @@
 @media (min-width: @desktop-width) {
   .sales-list {
     display: flex;
+    justify-content: space-between;
+
+    font-size: 15px;
+  }
+
+  .sales-list__item {
+    width: 175px;
+  }
+
+  .sales-list__item:nth-child(2) a {
+    text-align: center;
+  }
+
+  .sales-list__item a {
+    display: block;
+    padding: 13px 0;
   }
 }
