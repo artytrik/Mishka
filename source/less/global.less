@@ -40,6 +40,9 @@ input[type="checkbox"].visually-hidden {
 }
 
 .button {
+  display: block;
+  padding: 14px 10px;
+
   font: inherit;
 
   font-size: 18px;
@@ -50,6 +53,19 @@ input[type="checkbox"].visually-hidden {
   vertical-align: middle;
   text-transform: uppercase;
 
+  box-sizing: border-box;
   background-color: #ffffff;
   border: 2px solid @base-color;
+
+  &:hover {
+    color: #ffffff;
+
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #444444;
+  }
 }
