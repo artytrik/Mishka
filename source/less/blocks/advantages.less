@@ -1,14 +1,16 @@
-.advantages {
-  padding: 30px;
-}
-
 .advantages__wrapper {
   width: 320px;
   margin: 0 auto;
+  padding: 28.5px 30px;
+
+  box-sizing: border-box;
 }
 
 .advantages__title {
+  display: block;
   margin: 0;
+  margin-left: -2px;
+  margin-bottom: 85px;
 
   font-size: 25px;
   color: #000000;
@@ -22,22 +24,168 @@
 }
 
 .advantages__item {
+  position: relative;
+
   width: 260px;
+  margin-bottom: 83px;
 
   font-size: 17px;
   line-height: 20px;
   color: #000000;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    .pseudo();
+  }
+
+  &.advantages__item--ecologic::before {
+    bottom: 57px;
+    left: 8px;
+
+    width: 32px;
+    height: 37px;
+
+    background-image: url("../../img/icon-feature-flower.svg");
+    .background();
+  }
+
+  &.advantages__item--economic::before {
+    bottom: 66px;
+    left: 0;
+
+    width: 47px;
+    height: 27px;
+
+    background-image: url("../../img/icon-feature-money.svg");
+    .background();
+  }
+
+  &.advantages__item--likes::before {
+    bottom: 60px;
+    left: 7px;
+
+    width: 34px;
+    height: 28px;
+
+    background-image: url("../../img/icon-feature-heart.svg");
+    .background();
+  }
+
+  &.advantages__item--handmade::before {
+    bottom: 56px;
+    left: 3px;
+
+    width: 35px;
+    height: 35px;
+
+    background-image: url("../../img/icon-feature-ball.svg");
+    .background();
+  }
+
+  &.advantages__item--domestic::before {
+    bottom: 67px;
+    left: -6px;
+
+    width: 55px;
+    height: 23px;
+
+    background-image: url("../../img/icon-feature-rocket.svg");
+    .background();
+  }
+
+  &.advantages__item--present::before {
+    bottom: 60px;
+    left: 3px;
+
+    width: 33px;
+    height: 32px;
+
+    background-image: url("../../img/icon-feature-gift.svg");
+    .background();
+  }
 }
 
 @media (min-width:@tablet-width) {
   .advantages__wrapper {
     width: 668px;
+    padding: 0;
+    padding-right: 33px;
+  }
+
+  .advantages__title {
+    margin-top: 48px;
+    margin-bottom: 104px;
+    margin-left: -4px;
+
+    font-size: 43px;
+    line-height: 50px;
   }
 
   .advantages__list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .advantages__item {
+    width: 300px;
+    margin-bottom: 112px;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    &:last-child {
+      margin-bottom: 83px;
+    }
+
+    &--handmade {
+      order: 1;
+    }
+
+    &--economic {
+      order: 2;
+    }
+
+    &--domestic {
+      order: 3;
+    }
+
+    &--likes {
+      order: 4;
+      margin-bottom: 83px;
+    }
+
+    &--present {
+      order: 5;
+    }
+
+    &.advantages__item--ecologic::before {
+      bottom: 60px;
+    }
+
+    &.advantages__item--handmade::before {
+      bottom: 59px;
+    }
+
+    &.advantages__item--domestic::before {
+      bottom: 70px;
+    }
+
+    &.advantages__item--economic::before {
+      bottom: 69px;
+    }
+
+    &.advantages__item--likes::before {
+      bottom: 63px;
+      left: 9px;
+    }
+
+    &.advantages__item--present::before {
+      bottom: 63px;
+    }
   }
 }
 
@@ -46,5 +194,16 @@
     width: 1050px;
     padding: 0 175px;
     box-sizing: border-box;
+  }
+
+  .advantages__title {
+    margin-top: 60px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .advantages__list {
+    padding-right: 50px;
   }
 }
