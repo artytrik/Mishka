@@ -14,13 +14,17 @@
 .goods-list__item a {
   position: relative;
   display: block;
-  padding: 28px 30px;
+  padding: 25px 30px 30px;
 
   color: #ffffff;
   text-align: left;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .goods-list__item a::after {
@@ -38,7 +42,7 @@
 
   &--left a::after {
     top: 23px;
-    right: 35px;
+    right: 38px;
 
     width: 40px;
     height: 62px;
@@ -59,6 +63,24 @@
 
     background: url("../../img/icon-toy.svg") no-repeat;
   }
+
+  &:hover a::after {
+    opacity: 0.7;
+  }
+
+  &:active a::after {
+    opacity: 0.3;
+  }
+
+  &--left:hover,
+  &--left:active {
+    color: #59d5bc;
+  }
+
+  &--left:hover,
+  &--left:active {
+    color: #46c1ae;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -69,7 +91,7 @@
 
   .goods-list__item {
     &:hover {
-    transform: translateY(-5px);
+      transform: translateY(-5px);
     }
 
     &--left a::after {
