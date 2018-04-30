@@ -1,9 +1,41 @@
 .size-choosing {
   .clear-ul();
+
+  display: flex;
+  margin-bottom: 46px;
 }
 
-.size-choosing__size-name {
+.size-choosing__size-option {
+  margin-right: 7px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.size-choosing__size-option label {
+  position: relative;
+
+  display: block;
+  padding: 15px 37px 13px;
+
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
+  text-align: center;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.size-choosing__size-select + label::before {
+  .pseudo();
+
+  top: 0px;
+  left: 0px;
+
+  width: 78px;
+  height: 48px;
+
+  border: 2px solid black;
 }
