@@ -2,4 +2,48 @@
   .clear-ul();
 
   display: flex;
+  width: 163px;
+}
+
+.social__item {
+  width: 45px;
+  height: 40px;
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+
+  &:hover path {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--instagram {
+    width: 22px;
+    height: 21px;
+    padding-left: 12px;
+    padding-top: 10px;
+  }
+
+  &--facebook {
+    width: 15px;
+    height: 28px;
+    padding-left: 16px;
+    padding-top: 5px;
+  }
+
+  &--twitter {
+    width: 23px;
+    height: 20px;
+    padding-left: 11px;
+    padding-top: 10px;
+  }
 }
