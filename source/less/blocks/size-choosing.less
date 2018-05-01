@@ -3,21 +3,24 @@
 
   display: flex;
   margin-bottom: 46px;
+  width: 100%;
 }
 
 .size-choosing__size-option {
-  margin-right: 7px;
+  margin-right: 5%;
+  width: 30%;
 
   &:last-child {
     margin-right: 0;
   }
 }
 
-.size-choosing__size-option label {
+.size-choosing__size-name {
   position: relative;
 
   display: block;
-  padding: 15px 37px 13px;
+  padding-top: 15px;
+  padding-bottom: 13px;
 
   font-size: 17px;
   line-height: 16px;
@@ -26,16 +29,10 @@
 
   cursor: pointer;
   user-select: none;
+
+  border: 2px solid #ececec;
 }
 
-.size-choosing__size-select + label::before {
-  .pseudo();
-
-  top: 0px;
-  left: 0px;
-
-  width: 78px;
-  height: 48px;
-
-  border: 2px solid black;
+.size-choosing__size-select:checked + .size-choosing__size-name {
+  border: 2px solid #63d1bb;
 }
