@@ -1,7 +1,18 @@
 .best {
   position: relative;
 
-  padding: 30px;
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: url("../../img/zigzag-line-desktop.svg") repeat-x;
+  }
 }
 
 .best__wrapper {
@@ -11,6 +22,9 @@
   justify-content: space-between;
   width: 320px;
   margin: 0 auto;
+  padding: 28px 30px 41px;
+
+  box-sizing: border-box;
 }
 
 .best__header-wrapper {
@@ -19,11 +33,19 @@
 }
 
 .best__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.best__description-inner {
   width: 260px;
 }
 
 .best__name {
+  display: block;
   margin: 0;
+  margin-bottom: 4px;
 
   font-size: 25px;
   line-height: 30px;
@@ -31,81 +53,225 @@
 }
 
 .best__title {
+  display: block;
   margin: 0;
+  margin-bottom: 24px;
 
   font-size: 17px;
   line-height: 20px;
   color: #63d1bb;
+  text-transform: uppercase;
 }
 
 .best__description {
+  display: block;
+  margin: 0;
+  margin-bottom: 16px;
+
   line-height: 24px;
 }
 
 .best__characteristics {
+  width: 100%;
+  margin-bottom: 28px;
+
   line-height: 20px;
 
   border-collapse: collapse;
 }
 
 .best__characteristics td {
+  padding: 10px 0 9.5px;
+
   border-bottom: 1px solid #ececec;
 }
 
+.best__field {
+  width: 38%;
+}
+
+.best__value {
+  width: 62%;
+}
+
 .best__picture {
-  width: 334px;
+  margin: 0;
+  margin-bottom: 23px;
+  width: 260px;
+  height: 315px;
 }
 
 .best__price {
   display: block;
+  margin-bottom: 27px;
 
+  text-align: center;
   font-size: 17px;
   line-height: 24px;
 }
 
 .best__order {
+  width: 100%;
+
   font-size: 17px;
 }
 
 @media (min-width: @tablet-width) {
+  .best {
+    &::after {
+      height: 17px;
+    }
+  }
+
   .best__wrapper {
     flex-direction: row;
     width: 668px;
+    padding: 0;
+    padding-bottom: 69px;
   }
 
   .best__header-wrapper {
     flex-direction: row;
     justify-content: space-between;
     width: 668px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .best__description-wrapper {
+    position: relative;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .best__name {
+    margin: 0;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .best__title {
+    margin: 0;
+    margin-top: 11px;
+    width: 125px;
+
+    text-align: center;
+    line-height: 17px;
+  }
+
+  .best__description-inner {
+    width: 292px;
+  }
+
+  .best__description {
+    margin-bottom: 37px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .best__field {
+    width: 33%;
+  }
+
+  .best__value {
+    width: 67%;
+  }
+
+  .best__picture {
+    width: 333px;
+    height: 404px;
+    margin: 0;
+    margin-top: 8px;
+  }
+
+  .best__price-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 290px;
+  }
+
+  .best__price {
+    margin-bottom: 35px;
+
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .best {
+    &::after {
+      height: 23px;
+    }
+  }
+
   .best__wrapper {
+    position: relative;
+
     width: 1050px;
+    padding-bottom: 96px;
   }
 
   .best__header-wrapper {
     position: absolute;
+    top: 108px;
+    left: -3px;
+    z-index: 1;
 
     justify-content: flex-start;
+    width: 750px;
+    margin: 0;
   }
 
-  .best__description-wrapper {
-    margin: 50px;
+  .best__name {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .best__description-inner {
+    margin-top: 214px;
+    margin-left: 175px;
+  }
+
+  .best__description {
+    margin-bottom: 50px;
   }
 
   .best__title {
     order: -1;
+
+    width: 175px;
+    margin-top: 15px;
+    padding: 0 25px;
+
+    box-sizing: border-box;
+  }
+
+  .best__characteristics td {
+    padding: 8px 0 11.5px;
+  }
+
+  .best__field {
+    width: 34%;
+  }
+
+  .best__value {
+    width: 66%;
   }
 
   .best__picture {
     width: 525px;
+    height: 636px;
+    margin-top: 55px;
   }
 
   .best__price-wrapper {
-    width: 288px;
-    margin: 50px;
+    left: 176px;
+
+    width: 292px;
   }
 }
-

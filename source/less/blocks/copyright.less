@@ -1,9 +1,36 @@
-.copyright {
-  display: flex;
+.copyright__link {
+  position: relative;
+
+  display: block;
+
+  &:hover svg {
+    path {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
+  display: block;
+
   font-size: 19px;
   line-height: 18px;
   color: #000000;
+}
+
+.copyright__link svg {
+  position: absolute;
+  top: -13px;
+  right: -7px;
+
+  width: 40px;
+  height: 50px;
+
+  & path {
+    fill: #63d1bb;
+  }
 }

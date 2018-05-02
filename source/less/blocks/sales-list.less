@@ -6,8 +6,34 @@
   color: #000000;
 }
 
+.sales-list__item a[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+   &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 @media (min-width: @desktop-width) {
   .sales-list {
     display: flex;
+    justify-content: space-between;
+
+    font-size: 15px;
+  }
+
+  .sales-list__item {
+    width: 175px;
+  }
+
+  .sales-list__item:nth-child(2) a {
+    text-align: center;
+  }
+
+  .sales-list__item a {
+    display: block;
+    padding: 13px 0;
   }
 }

@@ -9,7 +9,19 @@
   font-weight: 700;
   color: #000000;
 
-  height: 315px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 260px;
+  padding: 21px 30px 22px;
+}
+
+.main-nav__logo {
+  height: 35px;
 }
 
 .main-nav__logo-image {
@@ -17,18 +29,90 @@
   height: 35px;
 }
 
+.main-nav__toggle {
+  position: relative;
+
+  display: block;
+  width: 21px;
+  height: 20px;
+  margin-top: 8px;
+  margin-left: 67px;
+
+  background-color: #ffffff;
+
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #221f1f;
+  box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: -2px;
+
+    width: 26px;
+    height: 2px;
+
+    background-color: #221f1f;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__logo-wrapper {
+  justify-content: center;
+}
+
 .main-nav__list {
   .clear-ul();
 
   display: flex;
   flex-direction: column;
-
 }
 
 .main-nav__delivery {
   display: none;
 
+  font-size: 15px;
   font-weight: 400;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -36,15 +120,39 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: -58px;
-
     width: 768px;
-    height: 146px;
+    padding: 0 50px;
+
+    box-sizing: border-box;
+    border: none;
   }
 
   .main-nav__logo-wrapper {
     order: -2;
-    width: 315px;
+    display: block;
+    width: 167px;
+    margin-top: 22px;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .main-nav__logo {
+    height: 46px;
+  }
+
+  .main-nav__logo a[href] {
+    &:hover svg {
+      opacity: 0.6;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
+  }
+
+  .main-nav__logo-image {
+    width: 113px;
+    height: 46px;
   }
 
   .main-nav__toggle {
@@ -53,10 +161,12 @@
 
   .main-nav__list {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .main-nav__delivery {
     display: block;
+    padding: 13px 0;
   }
 }
 
