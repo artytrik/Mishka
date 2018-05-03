@@ -140,12 +140,12 @@
     height: 46px;
   }
 
-  .main-nav__logo a[href] {
-    &:hover svg {
+  .main-nav__logo {
+    &:hover {
       opacity: 0.6;
     }
 
-    &:active svg {
+    &[href]:active {
       opacity: 0.3;
     }
   }
@@ -173,5 +173,19 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     width: 1150px;
+  }
+
+  .main-nav__logo {
+    height: 72px;
+  }
+
+  .main-nav__logo-image {
+    width: 149px;
+    height: 72px;
+  }
+
+  .main-nav__logo-wrapper {
+    margin-top: 9px;
+    margin-bottom: 7px;
   }
 }

@@ -1,5 +1,15 @@
-.best {
+.best__wrapper {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 320px;
+  margin: 0 auto;
+  padding: 28px 30px 45px;
+
+  box-sizing: border-box;
 
   &::after {
     content: "";
@@ -9,22 +19,13 @@
     left: 0;
 
     width: 100%;
-    height: 6px;
+    height: 10px;
 
-    background: url("../../img/zigzag-line-desktop.svg") repeat-x;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    background-size: 300px auto;
   }
-}
-
-.best__wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 320px;
-  margin: 0 auto;
-  padding: 28px 30px 41px;
-
-  box-sizing: border-box;
 }
 
 .best__header-wrapper {
@@ -117,24 +118,24 @@
 }
 
 @media (min-width: @tablet-width) {
-  .best {
-    &::after {
-      height: 17px;
-    }
-  }
-
   .best__wrapper {
     flex-direction: row;
     width: 668px;
     padding: 0;
     padding-bottom: 69px;
+
+    &::after {
+      height: 17px;
+
+      background-size: 750px auto;
+    }
   }
 
   .best__header-wrapper {
     flex-direction: row;
     justify-content: space-between;
     width: 668px;
-    margin-top: 30px;
+    margin-top: 33px;
     margin-bottom: 50px;
   }
 
@@ -147,6 +148,7 @@
 
   .best__name {
     margin: 0;
+    margin-left: -2px;
 
     font-size: 43px;
     line-height: 50px;
@@ -203,22 +205,22 @@
 }
 
 @media (min-width: @desktop-width) {
-  .best {
-    &::after {
-      height: 23px;
-    }
-  }
-
   .best__wrapper {
     position: relative;
 
     width: 1050px;
     padding-bottom: 96px;
+
+    &::after {
+      height: 23px;
+
+      background-size: 1050px auto;
+    }
   }
 
   .best__header-wrapper {
     position: absolute;
-    top: 108px;
+    top: 115px;
     left: -3px;
     z-index: 1;
 
@@ -233,7 +235,7 @@
   }
 
   .best__description-inner {
-    margin-top: 214px;
+    margin-top: 221px;
     margin-left: 175px;
   }
 
@@ -266,7 +268,7 @@
   .best__picture {
     width: 525px;
     height: 636px;
-    margin-top: 55px;
+    margin-top: 62px;
   }
 
   .best__price-wrapper {
