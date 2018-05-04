@@ -53,6 +53,19 @@
   height: 150px;
 
   cursor: pointer;
+
+  &:hover {
+    &::before{
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+
+  &:active {
+    &::before{
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
 }
 
 .making__description {
