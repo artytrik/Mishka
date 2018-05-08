@@ -7,7 +7,9 @@ var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var autoprefixer = require("autoprefixer");
+var htmlmin = require("gulp-htmlmin");
 var minify = require("gulp-csso");
+var uglify = require("gulp-uglify");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
@@ -15,6 +17,7 @@ var rename = require("gulp-rename");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
 var del = require("del");
+var pump = require("pump");
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -41,11 +44,22 @@ gulp.task("sprite", function(){
 
 gulp.task("html", function() {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(posthtml([
       include()
     ]))
     .pipe(gulp.dest("build"));
 })
+
+gulp.task("js", function(cb) {
+  pump([
+    gulp.src("source/js/**/*.js"),
+    uglify(),
+    gulp.dest("build/js")
+  ],
+  cb
+  );
+});
 
 gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -77,7 +91,7 @@ gulp.task("serve", function() {
 });
 
 gulp.task("build", function(done) {
-  run("clean", "copy", "style", "sprite", "html", done);
+  run("clean", "copy", "style", "sprite", "html", "js", done);
 });
 
 gulp.task("copy", function() {
