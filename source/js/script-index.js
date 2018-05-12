@@ -30,3 +30,25 @@ modalOverlay.addEventListener('click', function(evt) {
   orderPopup.classList.remove('modal-cart__show');
   modalOverlay.classList.remove('modal-overlay__show');
 })
+
+var myMap;
+var myLatLng;
+var myMarker;
+
+function initMap() {
+  var element = document.getElementById('map-canvas');
+  var image = "../img/icon-map-pin.svg";
+  myLatLng = new google.maps.LatLng(59.938795, 30.323084);
+  var mapOptions = {
+    zoom: 17,
+    center: {lat: 59.938795, lng: 30.323084}
+  }
+
+  myMap = new google.maps.Map(element, mapOptions);
+
+  myMarker = new google.maps.Marker({
+    position: myLatLng,
+    map: myMap,
+    icon: image
+  });
+}

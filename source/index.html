@@ -161,7 +161,7 @@
               </svg>
             </button>
           </p>
-          <a class="button reviews__write" href="#">Написать</a>
+          <a class="button reviews__write" href="reviews.html">Написать</a>
         </div>
       </section>
       <section class="contacts">
@@ -171,7 +171,7 @@
             <div class="contacts__description">
               <div class="contacts__description-item">
                 <span class="contacts__field">e-mail:</span>
-                <span class="contacts__value"><a class=" contacts__value contacts__value--email" href="#">info@mimimishkashop.ru</a></span>
+                <span class="contacts__value"><a class="contacts__email" href="#">info@mimimishkashop.ru</a></span>
               </div>
               <div class="contacts__description-item">
                 <span class="contacts__field">адрес:</span>
@@ -183,7 +183,7 @@
               </div>
             </div>
           </div>
-          <p class="contacts__map">
+          <p class="contacts__map" id="map-canvas">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
@@ -193,7 +193,7 @@
               <img class="contacts__map-picture" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Местоположение магазина">
             </picture>
           </p>
-          <a class="button contacts__write" href="#">Напишите нам</a>
+          <a class="button contacts__write" href="contacts.html">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -269,7 +269,7 @@
       </div>
     </section>
     <div class="modal-overlay"></div>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb2tUJ_mS6u1gGgR-lUgqgJsogKWqra5M&callback=initMap" async defer></script>
     <script src="js/script-index.js"></script>
   </body>
 </html>

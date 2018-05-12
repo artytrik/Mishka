@@ -74,7 +74,7 @@
   &--telephone,
   &--email {
     padding-left: 0;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 }
 
@@ -114,6 +114,11 @@
   border-color: @base-color;
 }
 
+.order-form__input--radio:focus + .order-form__option-name::before {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .order-form__input--radio:checked + .order-form__option-name::after {
   .pseudo();
 
@@ -149,6 +154,11 @@
   border-color: @base-color;
 }
 
+.order-form__input--checkbox:focus + .order-form__option-name::before {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .order-form__input--checkbox:checked + .order-form__option-name::after {
   .pseudo();
 
@@ -180,6 +190,9 @@
   width: 100%;
   padding: 17px 0;
 
+  font-size: 17px;
+  line-height: 18px;
+
   border: none;
   border-bottom: 2px solid #000000;
 
@@ -189,6 +202,7 @@
 
   &:focus {
     border-bottom-color: #62d1ba;
+    outline: none;
   }
 
   &:hover + svg,
@@ -231,11 +245,16 @@
 
   display: block;
 
+  max-width: 100%;
+  min-width: 100%;
   width: 100%;
   min-height: 142px;
   padding: 15px;
   padding-top: 14px;
   margin: 0;
+
+  font-size: 17px;
+  line-height: 18px;
 
   box-sizing: border-box;
   border: 2px solid @base-color;
@@ -246,6 +265,7 @@
 
   &:focus {
     border-color: #62d1ba;
+    outline: none;
   }
 }
 
@@ -363,13 +383,14 @@
       display: flex;
       width: 501px;
       padding-left: 0;
-      margin-bottom: 38px;
+      margin-bottom: 39px;
     }
 
     &--telephone,
     &--email {
       width: 85%;
       padding-left: 0;
+      margin-bottom: 21px;
     }
 
     &--textarea {
@@ -426,8 +447,12 @@
       font-size: 19px;
     });
 
-    padding: 17px;
-    padding-top: 2px;
+    margin-top: -4px;
+    padding-top: 0;
+    padding-bottom: 13px;
+    padding-left: 17px;
+
+    font-size: 19px;
   }
 
   .order-form__input--telephone,
@@ -451,6 +476,8 @@
     });
 
     width: 91%;
+    max-width: 91%;
+    min-width: 91%;
   }
 
   .order-form__bottom-wrapper {
@@ -501,8 +528,16 @@
     }
   }
 
+  .order-form__input--text,
+  .order-form__input--telephone,
+  .order-form__input--email {
+    padding-bottom: 14px;
+  }
+
   .order-form__input--textarea {
     width: 76%;
+    max-width: 76%;
+    min-width: 76%;
   }
 
   .order-form__bottom-wrapper {
