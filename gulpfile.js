@@ -92,7 +92,7 @@ gulp.task("serve", function() {
 });
 
 gulp.task("build", function(done) {
-  run("clean", "copy", "style", "sprite", "html", "js", done);
+  run("clean", "copy", "style", "images", "sprite","html", "js", done);
 });
 
 gulp.task("copy", function() {
