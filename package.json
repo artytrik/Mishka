@@ -20,14 +20,16 @@
     "gulp-svgstore": "6.1.1",
     "gulp-uglify": "3.0.0",
     "gulp-webp": "3.0.0",
+    "postcss": "^8.4.33",
+    "postcss-less": "^6.0.0",
     "posthtml-include": "1.1.0",
     "pump": "^3.0.0",
-    "stylelint": "9.2.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint": "^16.2.1",
+    "stylelint-config-htmlacademy": "^4.0.4"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "stylelint": "stylelint \"source/less/**/*.less\"",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "npm run build && gulp serve"
@@ -46,7 +48,7 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "8.11"
+    "node": "^16.0.0"
   },
   "dependencies": {
     "natives": "1.1.6"
