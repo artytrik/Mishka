@@ -8,8 +8,6 @@ import autoprefixer from "autoprefixer";
 import htmlmin from "gulp-htmlmin";
 import minify from "gulp-csso";
 import uglify from "gulp-uglify";
-import imagemin, { optipng } from "gulp-imagemin";
-import webp from "gulp-webp";
 import svgstore from "gulp-svgstore";
 import rename from "gulp-rename";
 import { stream, init } from "browser-sync";
@@ -63,15 +61,6 @@ task("js", function(cb) {
 
 task("images", function() {
   return src("source/img/**/*.{png,jpg}")
-    .pipe(imagemin([
-      optipng({optimizationLevel: 3}),
-    ]))
-    .pipe(dest("source/img"));
-});
-
-task("webp", function() {
-  return src("source/img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
     .pipe(dest("source/img"));
 });
 
